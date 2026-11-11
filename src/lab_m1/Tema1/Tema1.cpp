@@ -13,6 +13,8 @@ namespace m1
     {
     }
 
+    // setam o camera ortogragica direct pe rezolutia ecranului
+    // (0,0) - stanga jos, (width, height) dreapta sus
     void Tema1::Init()
     {
         glm::ivec2 resolution = window->GetResolution();
@@ -21,6 +23,7 @@ namespace m1
         camera->SetPosition(glm::vec3(0, 0, 50));
         camera->SetRotation(glm::vec3(0, 0, 0));
         camera->Update();
+        // dezactivam controlul 3D al camerei
         GetCameraInput()->SetActive(false);
     }
 
